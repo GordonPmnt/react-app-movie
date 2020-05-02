@@ -22,7 +22,7 @@ class App extends React.Component {
       this.state,
     )
     .then(
-      response => alert(`Movie added with id: ${response.id}!`)
+      response => alert(`Movie added with id: ${response.data.id}!`)
     )
     .catch(
       error => console.log(error)
