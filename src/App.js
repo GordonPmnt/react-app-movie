@@ -8,6 +8,11 @@ class App extends React.Component {
     comment: '',
   }
 
+  handleChange = event => {
+    const { id, value } = event.target
+    this.setState({ [id]: value })
+  }
+
   render() {
     return (
       <>
@@ -21,6 +26,8 @@ class App extends React.Component {
                 type="text"
                 id="title"
                 name="lastname"
+                value={this.state.id}
+                onChange={this.handleChange}
               />
             </div>
   
@@ -34,6 +41,8 @@ class App extends React.Component {
                 style={{
                   width: '208px'
                 }}
+                value={this.state.id}
+                onChange={this.handleChange}
               />
             </div>
   
@@ -45,7 +54,7 @@ class App extends React.Component {
                   alignContent: 'flex-start'
                 }}
               >
-                comment: 
+                Comments: 
               </label>
               <textarea
                 style={{
@@ -54,6 +63,8 @@ class App extends React.Component {
                 }}
                 id="comment"
                 name="comment"
+                value={this.state.id}
+                onChange={this.handleChange}
               />
             </div>
             <hr />
