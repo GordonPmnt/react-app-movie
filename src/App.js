@@ -44,6 +44,7 @@ class App extends React.Component {
                 name="lastname"
                 value={this.state.id}
                 onChange={this.handleChange}
+                required
               />
             </div>
   
@@ -59,6 +60,7 @@ class App extends React.Component {
                 }}
                 value={this.state.id}
                 onChange={this.handleChange}
+                required
               />
             </div>
   
@@ -81,6 +83,7 @@ class App extends React.Component {
                 name="comment"
                 value={this.state.id}
                 onChange={this.handleChange}
+                required
               />
             </div>
             <hr />
