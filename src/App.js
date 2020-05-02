@@ -2,7 +2,12 @@ import React from 'react';
 
 
 class App extends React.Component {
-  
+  state = {
+    title: '',
+    poster: '',
+    comment: '',
+  }
+
   render() {
     return (
       <>
@@ -11,20 +16,20 @@ class App extends React.Component {
           <fieldset style={{ margin: '50px' }}>
             <legend style={{ color: '#E4007C' }}>Movie informations</legend>
             <div>
-              <label htmlFor="movieName">Movie name: </label>
+              <label htmlFor="title">Movie name: </label>
               <input
                 type="text"
-                id="movieName"
+                id="title"
                 name="lastname"
               />
             </div>
   
             <div>
-              <label htmlFor="posterUrl">Movie poster: </label>
+              <label htmlFor="poster">Movie poster: </label>
               <input
                 type="text"
-                id="posterUrl"
-                name="posterUrl"
+                id="poster"
+                name="poster"
                 placeholder="Please type the poster URL"
                 style={{
                   width: '208px'
@@ -34,21 +39,21 @@ class App extends React.Component {
   
             <div>
               <label 
-                htmlFor="comments"
+                htmlFor="comment"
                 style={{
                   display: 'flex',
                   alignContent: 'flex-start'
                 }}
               >
-                Comments: 
+                comment: 
               </label>
               <textarea
                 style={{
                   width: '300px',
                   height: '75px',
                 }}
-                id="comments"
-                name="comments"
+                id="comment"
+                name="comment"
               />
             </div>
             <hr />
