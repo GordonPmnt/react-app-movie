@@ -4,12 +4,12 @@ import React from 'react';
 const App = () => {
   return (
     <>
-      <h1>Please fill in your favorite movie</h1>
+      <h1 style={{ color: '#E4007C' }}>Please fill in your favorite movie</h1>
       <form>
-        <fieldset>
-          <legend>Movie informations</legend>
+        <fieldset style={{ margin: '50px' }}>
+          <legend style={{ color: '#E4007C' }}>Movie informations</legend>
           <div>
-            <label htmlFor="movieName">Movie name</label>
+            <label htmlFor="movieName">Movie name: </label>
             <input
               type="text"
               id="movieName"
@@ -18,19 +18,33 @@ const App = () => {
           </div>
 
           <div>
-            <label htmlFor="posterUrl">Movie poster</label>
+            <label htmlFor="posterUrl">Movie poster: </label>
             <input
               type="text"
               id="posterUrl"
               name="posterUrl"
               placeholder="Please type the poster URL"
+              style={{
+                width: '208px'
+              }}
             />
           </div>
 
           <div>
-            <label htmlFor="comments">Comments</label>
-            <input
-              type="textarea"
+            <label 
+              htmlFor="comments"
+              style={{
+                display: 'flex',
+                alignContent: 'flex-start'
+              }}
+            >
+              Comments: 
+            </label>
+            <textarea
+              style={{
+                width: '300px',
+                height: '75px',
+              }}
               id="comments"
               name="comments"
             />
