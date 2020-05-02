@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 
 class App extends React.Component {
@@ -13,11 +14,26 @@ class App extends React.Component {
     this.setState({ [id]: value })
   }
 
+  handleSubmit = event => {
+    event.preventDefault()
+    axios
+    .post(
+      'https://post-a-form.herokuapp.com/api/movies/',
+      this.state,
+    )
+    .then(
+      response => alert(`Movie added with id: ${response.id}!`)
+    )
+    .catch(
+      error => console.log(error)
+    )
+  }
+
   render() {
     return (
       <>
         <h1 style={{ color: '#E4007C' }}>Please fill in your favorite movie</h1>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <fieldset style={{ margin: '50px' }}>
             <legend style={{ color: '#E4007C' }}>Movie informations</legend>
             <div>
