@@ -73,6 +73,18 @@ class App extends React.Component {
             </div>
           </fieldset>
         </form>
+
+        <fieldset style={{ margin: '50px' }}>
+          <legend style={{ color: '#E4007C' }}>Preview</legend>
+          <p>Title: {this.state.title}</p>
+          <img 
+            src={this.state.poster} 
+            alt="movie poster"
+            style={{ width: '100px'}}
+          />
+          <p>Comments: </p>
+          <p style={{ whiteSpace: 'pre-wrap' }}>{this.state.comment}</p>
+        </fieldset>
       </>
     );
   }
